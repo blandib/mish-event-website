@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebrations Designed to Shine</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Celebrations<span>DesignedToShine</span></a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li class="nav-item"><a href="#hire" class="nav-link" data-section="hire">Hire Decor</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-controls">
+                <button class="mode-toggle" id="modeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Celebrations Designed to Shine</h1>
+                    <p>Transforming Johannesburg's Events with Stunning Balloon & Decor Styling</p>
+                    <a href="#contact" class="btn" data-section="contact">Get a Quote</a>
+                </div>
+            </div>
+
+            <div class="intro">
+                <h2 class="section-title">Making Your Milestones Magical</h2>
+                <p>At Celebrations Designed to Shine, we believe every celebration deserves to sparkle. We are passionate about turning your vision into a breathtaking reality. From intimate baby showers to grand corporate events, we specialize in custom balloon garlands, elegant backdrops, and themed decor that will leave your guests in awe.</p>
+            </div>
+
+            <div class="quick-links">
+                <div class="link-card">
+                    <i class="fas fa-images"></i>
+                    <h3>View Our Gallery</h3>
+                    <a href="#gallery" class="btn btn-secondary" data-section="gallery">Get Inspired</a>
+                </div>
+                <div class="link-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Full Decor Setup</h3>
+                    <a href="#services" class="btn btn-secondary" data-section="services">Learn More</a>
+                </div>
+                <div class="link-card">
+                    <i class="fas fa-balloon"></i>
+                    <h3>Hire Decor Items</h3>
+                    <a href="#hire" class="btn btn-secondary" data-section="hire">Browse Items</a>
+                </div>
+                <div class="link-card">
+                    <i class="fas fa-comment"></i>
+                    <h3>Get a Quote</h3>
+                    <a href="#contact" class="btn btn-secondary" data-section="contact">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <h2 class="section-title">What Our Clients Say</h2>
+                
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <p>"Absolutely blown away by the decor for my daughter's 1st birthday! The attention to detail was incredible. Highly recommend!"</p>
+                        <div class="client">- Sarah L.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"We hired the number balloons and a backdrop for our office party. Professional, on time, and the quality was superb. Will definitely be using them again."</p>
+                        <div class="client">- Mark T., Corporate Client</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="text-center">Browse through our portfolio of stunning event decorations</p>
+            
+            <div class="gallery-filters">
+                <button class="btn filter-btn active" data-filter="all">All Events</button>
+                <button class="btn filter-btn" data-filter="baby">Baby Showers</button>
+                <button class="btn filter-btn" data-filter="birthday">Birthdays</button>
+                <button class="btn filter-btn" data-filter="corporate">Corporate Events</button>
+                <button class="btn filter-btn" data-filter="seasonal">Seasonal</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Decoration">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Event">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="https://images.unsplash.com/photo-1578001269255-4fa2b5d5d90f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Christmas Decor">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decor">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Party">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Our Services & Packages</h2>
+            <p class="text-center">We offer a range of decor services to make your event truly special</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Full Setup Service</h3>
+                    <p>Complete event styling including backdrops, balloon arrangements, centerpieces, and themed decor. We handle everything from design to cleanup.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Custom Themes</h3>
+                    <p>Have a specific vision? We create custom decor designs based on your theme, color scheme, or inspiration to make your event unique.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Seasonal Styling</h3>
+                    <p>Festive decor for Christmas, New Year, Easter, and other seasonal celebrations. Perfect for homes, offices, and holiday parties.</p>
+                </div>
+            </div>
+            
+            <h3 class="section-title">Packages</h3>
+            
+            <div class="package-comparison">
+                <table class="package-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Basic Package</th>
+                            <th>Premium Package</th>
+                            <th>Custom Package</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature">Backdrop</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Balloon Arrangements</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Printed Board</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Themed Centerpieces</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Custom Design</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature">Price</td>
+                            <td>R1,500+</td>
+                            <td>R3,000+</td>
+                            <td>Quote-based</td>
+                        </tr>
+                        <tr>
+                            <td class="feature"></td>
+                            <td><a href="#contact" class="btn" data-section="contact">Book Now</a></td>
+                            <td><a href="#contact" class="btn" data-section="contact">Book Now</a></td>
+                            <td><a href="#contact" class="btn" data-section="contact">Get Quote</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Decor Section -->
+    <section id="hire" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Hire Decor Items</h2>
+            <p class="text-center">Rent individual decor pieces for your DIY celebrations</p>
+            
+            <div class="items-grid">
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1578001269255-4fa2b5d5d90f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Balloon Numbers">
+                    </div>
+                    <div class="item-details">
+                        <h3>Balloon Numbers</h3>
+                        <p>Large foil numbers (0-9) for birthdays and anniversaries</p>
+                        <div class="item-price">R200 per number</div>
+                        <a href="#contact" class="btn btn-secondary" data-section="contact">Inquire</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Printed Boards">
+                    </div>
+                    <div class="item-details">
+                        <h3>Printed Boards</h3>
+                        <p>Custom message boards for any celebration</p>
+                        <div class="item-price">R350 each</div>
+                        <a href="#contact" class="btn btn-secondary" data-section="contact">Inquire</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Arches & Frames">
+                    </div>
+                    <div class="item-details">
+                        <h3>Arches & Frames</h3>
+                        <p>Beautiful structures for photo opportunities</p>
+                        <div class="item-price">R600 each</div>
+                        <a href="#contact" class="btn btn-secondary" data-section="contact">Inquire</a>
+                    </div>
+                </div>
+                
+                <div class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1578001269255-4fa2b5d5d90f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Helium Bundles">
+                    </div>
+                    <div class="item-details">
+                        <h3>Helium Bundles</h3>
+                        <p>Helium tank with balloons and string</p>
+                        <div class="item-price">R450 per bundle</div>
+                        <a href="#contact" class="btn btn-secondary" data-section="contact">Inquire</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="terms">
+                <h3>Hire Terms & Conditions</h3>
+                <ul>
+                    <li>Hire duration is 48 hours</li>
+                    <li>A 50% refundable deposit is required to secure booking</li>
+                    <li>Client is responsible for damage beyond normal wear and tear</li>
+                    <li>Delivery options available at an additional cost</li>
+                    <li>Pickup and return arrangements must be made in advance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>From Balloon Artist to Full Decor Specialist</h3>
+                    <p>Celebrations Designed to Shine began as a passion project in 2015 when our founder, Jessica, started creating balloon arrangements for friends' birthday parties. What started as a hobby quickly grew into a thriving business as word spread about our unique designs and attention to detail.</p>
+                    <p>Today, we're a team of 5 dedicated decor specialists serving Johannesburg and surrounding areas. We've expanded beyond balloons to offer full event styling services, but we've never lost our commitment to the creativity and joy that started it all.</p>
+                    <p>We believe that every celebration—no matter how big or small—deserves to be beautiful, memorable, and uniquely tailored to the people being celebrated.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Our Team">
+                </div>
+            </div>
+            
+            <h3 class="section-title">Our Values</h3>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Creativity</h4>
+                    <p>We approach each event as a unique canvas, creating custom designs that reflect your style and vision.</p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Quality</h4>
+                    <p>From the materials we use to the execution of our designs, we never compromise on quality.</p>
+                </div>
+                
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h4>Passion</h4>
+                    <p>We genuinely love what we do, and it shows in every event we design and every client we work with.</p>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <h3 class="section-title">Client Love</h3>
+                
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <p>"Jessica and her team transformed our venue into a winter wonderland for our corporate holiday party. The attention to detail was exceptional!"</p>
+                        <div class="client">- Cape Town Events Co.</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"I've hired numbers for all three of my children's birthdays. Always perfect condition and such a hit with the kids!"</p>
+                        <div class="client">- Nomthandazo M.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="text-center">Reach out to discuss your event or request a quote</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Details</h3>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Johannesburg, South Africa<br>Available for on-site work throughout Gauteng</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+27 123 456 789</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@celebrations.co.za</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+27 123 456 789</p>
+                            <a href="https://wa.me/27123456789" class="btn btn-accent">Message Us</a>
+                        </div>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Select a service</option>
+                                <option value="full-setup">Full Setup Service</option>
+                                <option value="custom-theme">Custom Theme</option>
+                                <option value="seasonal">Seasonal Styling</option>
+                                <option value="hire">Hire Decor Items</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="faq">
+                <h3 class="section-title">Frequently Asked Questions</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How far in advance should I book? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We recommend booking at least 4-6 weeks in advance for standard events, and 8-12 weeks for weddings and large events, especially during peak season (October-December).</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer delivery and setup? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer delivery and professional setup for all our services. Delivery fees are based on location. For hired items, we offer both delivery and pickup options.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is your payment policy? <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We require a 50% deposit to secure your booking, with the balance due 7 days before your event. For hired items, we also require a refundable damage deposit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Celebrations Designed to Shine</h3>
+                    <p>Transforming your events with beautiful decor and balloon styling across Johannesburg.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" data-section="home">Home</a></li>
+                        <li><a href="#gallery" data-section="gallery">Gallery</a></li>
+                        <li><a href="#services" data-section="services">Services</a></li>
+                        <li><a href="#hire" data-section="hire">Hire Decor</a></li>
+                        <li><a href="#about" data-section="about">About</a></li>
+                        <li><a href="#contact" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+                    <p><i class="fas fa-phone"></i> +27 123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@celebrations.co.za</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Celebrations Designed to Shine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!--<script src="script.js"></script>-->
+</body>
+</html>
