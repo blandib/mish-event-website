@@ -47,6 +47,8 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsivedesing.css">
+    <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
       
@@ -81,128 +83,155 @@
             </div>
         </div>
     </header>
-            <!-- Gallery Section -->
-   <div class="gallery-container">
-        <h2 class="section-title">Our Gallery</h2>
-        <p class="text-center">Browse through our portfolio of stunning event decorations</p>
-        
-        <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All Events</button>
-            <button class="filter-btn" data-filter="baby">Baby Showers</button>
-            <button class="filter-btn" data-filter="birthday">Birthdays</button>
-            <button class="filter-btn" data-filter="corporate">Corporate Events</button>
-            <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+       <div class="container">
+        <div class="gallery-container">
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="text-center">Browse through our portfolio of stunning event decorations</p>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Events</button>
+                <button class="filter-btn" data-filter="baby">Baby Showers</button>
+                <button class="filter-btn" data-filter="birthday">Birthdays</button>
+                <button class="filter-btn" data-filter="corporate">Corporate Events</button>
+                <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+                
+            </div>
+             <!-- View Slideshow button positioned below the gallery -->
+            <button class="view-all-btn" id="viewSlideshow">
+                <i class="fas fa-play-circle"></i> View Slideshow
+            </button>
+            <div class="gallery-grid">
+                <!-- Baby Showers (10 images) -->
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1549056572-75914d6d7e1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmFieSUyMHNob3dlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Elegant Baby Shower">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decor">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1532117182044-031e7cd916ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Table">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Cake">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Gifts">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Flowers">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Balloons">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Theme">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decorations">
+                </div>
+                <div class="gallery-item" data-category="baby">
+                    <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Setup">
+                </div>
+                
+                <!-- Birthdays (10 images) -->
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/birthday.webp" alt="Birthday Decoration">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/birthday1.webp" alt="Birthday Party">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/birthday18.webp" alt="Birthday Celebration">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/birthday21.webp" alt="Birthday Cake">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/birthday60.webp" alt="Birthday Balloons">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="images/kidsbirthday.webp" alt="Birthday Setup">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Theme">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398178?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Flowers">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1g?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Table">
+                </div>
+                <div class="gallery-item" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Desserts">
+                </div>
+                
+                <!-- Corporate Events (10 images) -->
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowers.webp" alt="Corporate Event">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable.webp" alt="Conference Setup">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowers.webp" alt="Corporate Meeting">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable2.webp" alt="Corporate Decor">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable3.webp" alt="Corporate Stage">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowers.webp" alt="Corporate Setup">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable.webp" alt="Corporate Table Setting">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable2.webp" alt="Corporate Branding">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowertable3.webp" alt="Corporate Networking">
+                </div>
+                <div class="gallery-item" data-category="corporate">
+                    <img src="images/flowers.webp" alt="Corporate Awards">
+                </div>
+                
+                <!-- Seasonal (10 images) -->
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/babyshower.webp" alt="Christmas Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/christmas.webp" alt="Spring Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/marry.webp" alt="Halloween Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/christmas.webp" alt="Valentine Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/babyshower.webp" alt="Thanksgiving Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/marry.webp" alt="Easter Decor">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/christmas.webp" alt="Summer Party">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="images/babyshower.webp" alt="Winter Wonderland">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="https://images.unsplash.com/photo-1543616991-75a2c125ff5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Year's Eve">
+                </div>
+                <div class="gallery-item" data-category="seasonal">
+                    <img src="https://images.unsplash.com/photo-1528164344705-47542687000f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fall Festival">
+                </div>
+            </div>
+            
+          
         </div>
-         <button class="view-all-btn" id="viewSlideshow">
-            <i class="fas fa-play-circle"></i> View Slideshow
-        </button>
-        <div class="gallery-grid">
-            <!-- Baby Showers (10 images) -->
-            <div class="gallery-item" data-category="baby">
-                <img src="" alt="Elegant Baby Shower">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decor">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1532117182044-031e7cd916ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Table">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Cake">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Gifts">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Flowers">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Balloons">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Theme">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decorations">
-            </div>
-            <div class="gallery-item" data-category="baby">
-                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Setup">
-            </div>
-            
-            <!-- Birthdays (10 images) -->
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/birthday.webp" alt="Birthday Decoration">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/birthday1.webp" alt="Birthday Party">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/birthday18.webp" alt="Birthday Celebration">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/birthday21.webp" alt="Birthday Cake">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/birthday60.webp" alt="Birthday Balloons">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="images/kidsbirthday.webp" alt="Birthday Decor">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Setup">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Theme">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398178?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Flowers">
-            </div>
-            <div class="gallery-item" data-category="birthday">
-                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1g?ixlib=rb-4.0.3&auto=format&fit=c crop&w=600&q=80" alt="Birthday Table">
-            </div>
-            
-            <!-- Corporate Events (6 images) -->
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/lady.webp" alt="Corporate Event">
-            </div>
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/flowers.webp" alt="Conference Setup">
-            </div>
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/mid.webp" alt="Corporate Meeting">
-            </div>
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/flowertable2.webp" alt="Corporate Decor">
-            </div>
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/flowertable3.webp" alt="Corporate Stage">
-            </div>
-            <div class="gallery-item" data-category="corporate">
-                <img src="images/tableflower4.webp" alt="Corporate Setup">
-            </div>
-            
-            <!-- Seasonal (6 images) -->
-            <div class="gallery-item" data-category="seasonal">
-                <img src="images/christmas.webp" alt="Christmas Decor">
-            </div>
-            <div class="gallery-item" data-category="seasonal">
-                <img src="images/babyshower.webp" alt="spring day Decor">
-            </div>
-            <div class="gallery-item" data-category="seasonal">
-                <img src="images/marry.webp" alt="marriage propusal Decor">
-            </div>
-            <div class="gallery-item" data-category="seasonal">
-                <img src="https://images.unsplash.com/photo-1519677100203-a0e668c9243b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Halloween Decor">
-            </div>
-            <div class="gallery-item" data-category="seasonal">
-                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Year Decor">
-            </div>
-            <div class="gallery-item" data-category="seasonal">
-                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Valentine Decor">
-            </div>
-        </div>
-        
-       
     </div>
     
     <!-- Slideshow container -->
@@ -211,10 +240,13 @@
             <span class="close-btn" id="closeModal">&times;</span>
             
             <!-- Slides will be dynamically inserted here -->
+            <div class="slides-wrapper">
+                <!-- Slides will be added here by JavaScript -->
+            </div>
             
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" id="prevSlide">&#10094;</a>
+            <a class="next" id="nextSlide">&#10095;</a>
             
             <!-- The dots/circles -->
             <div class="dots-container" id="dotsContainer">
@@ -227,6 +259,7 @@
             </div>
         </div>
     </div>
+
 
    <!-- Footer -->
     <footer>
