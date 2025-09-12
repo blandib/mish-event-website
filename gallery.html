@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Celebrations Designed to Shine</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>MISH EVENTS | Decor Party Creations</title>
+    <meta name="title" content="MISH EVENTS | Decor Party Creations">
+    <meta name="description" content="We offer professional event decoration services across Johannesburg—bringing creativity, elegance, and impact to every occasion. From intimate setups to large-scale installations, we tailor each design to reflect your vision and elevate your experience. Let us turn your moments into memories—with style, precision, and heart.">
+    <meta name="keywords" content="Birthday party, kids parties, teens parties, adult parties, Wedding celebration, engagement celebration, Baby shower, gender reveal, Corporate event, product launch, team-building, School function, graduation, prom, Religious celebration, baptism, confirmation, bar mitzvah, bat mitzvah, Eid, Private dinner, garden party, family gathering, University event, college event, Pop-up shop, market stall, Bridal shower, kitchen tea, Themed party, costume event, Wellness retreat, workshop, Awards ceremony, gala night, Community festival, charity fundraiser, event decoration Johannesburg, party decor">
+    <meta name="author" content="MISH EVENTS">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mish-events.netlify.app/">
+    <meta property="og:title" content="MISH EVENTS | Decor & Party Creations">
+    <meta property="og:description" content="We offer professional event decoration services across Johannesburg—bringing creativity, elegance, and impact to every occasion. From intimate setups to large-scale installations, we tailor each design to reflect your vision and elevate your experience. Let us turn your moments into memories—with style, precision, and heart.">
+    <meta property="og:image" content="https://mish-events.netlify.app/images/socialmedia.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:alt" content="MISH EVENTS - Beautiful event decoration and party creations">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mish-events.netlify.app/">
+    <meta name="twitter:title" content="MISH EVENTS | Decor & Party Creations">
+    <meta name="twitter:description" content="We offer professional event decoration services across Johannesburg—bringing creativity, elegance, and impact to every occasion. From intimate setups to large-scale installations, we tailor each design to reflect your vision and elevate your experience. Let us turn your moments into memories—with style, precision, and heart.">
+    <meta name="twitter:image" content="https://mish-events.netlify.app/images/flowertable.webp">
+    <meta name="twitter:image:alt" content="MISH EVENTS - Beautiful flower table decoration">
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mish-events.netlify.app/">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700;800&display=swap" rel="stylesheet">
+      
+    <!-- Google Analytics (Update with your ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0FD4S2MN6"></script>
+    
 </head>
 <body>
     <!-- Header with Navigation -->
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">Celebrations<span>DesignedToShine</span></a>
+           <a href="index.html" class="logo">
+    <img src="images/logo.webp" alt="MiSH EVENTS">
+</a>
             
-           <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu" id="navMenu">
     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
     <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
@@ -33,56 +81,166 @@
             </div>
         </div>
     </header>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="page-section active">
-        <div class="container">
-            <h2 class="section-title">Our Gallery</h2>
-            <p class="text-center">Browse through our portfolio of stunning event decorations</p>
-            
-            <div class="gallery-filters">
-                <button class="btn filter-btn active" data-filter="all">All Events</button>
-                <button class="btn filter-btn" data-filter="baby">Baby Showers</button>
-                <button class="btn filter-btn" data-filter="birthday">Birthdays</button>
-                <button class="btn filter-btn" data-filter="corporate">Corporate Events</button>
-                <button class="btn filter-btn" data-filter="seasonal">Seasonal</button>
+            <!-- Gallery Section -->
+   <div class="gallery-container">
+        <h2 class="section-title">Our Gallery</h2>
+        <p class="text-center">Browse through our portfolio of stunning event decorations</p>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="baby">Baby Showers</button>
+            <button class="filter-btn" data-filter="birthday">Birthdays</button>
+            <button class="filter-btn" data-filter="corporate">Corporate Events</button>
+            <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+        </div>
+         <button class="view-all-btn" id="viewSlideshow">
+            <i class="fas fa-play-circle"></i> View Slideshow
+        </button>
+        <div class="gallery-grid">
+            <!-- Baby Showers (10 images) -->
+            <div class="gallery-item" data-category="baby">
+                <img src="" alt="Elegant Baby Shower">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decor">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1532117182044-031e7cd916ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Table">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Cake">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Gifts">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Flowers">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Balloons">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Theme">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decorations">
+            </div>
+            <div class="gallery-item" data-category="baby">
+                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Setup">
             </div>
             
-            <div class="gallery-grid">
-                <div class="gallery-item" data-category="baby">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower">
-                </div>
-                <div class="gallery-item" data-category="birthday">
-                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Decoration">
-                </div>
-                <div class="gallery-item" data-category="corporate">
-                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Corporate Event">
-                </div>
-                <div class="gallery-item" data-category="seasonal">
-                    <img src="https://images.unsplash.com/photo-1578001269255-4fa2b5d5d90f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Christmas Decor">
-                </div>
-                <div class="gallery-item" data-category="baby">
-                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baby Shower Decor">
-                </div>
-                <div class="gallery-item" data-category="birthday">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Party">
-                </div>
+            <!-- Birthdays (10 images) -->
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/birthday.webp" alt="Birthday Decoration">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/birthday1.webp" alt="Birthday Party">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/birthday18.webp" alt="Birthday Celebration">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/birthday21.webp" alt="Birthday Cake">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/birthday60.webp" alt="Birthday Balloons">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="images/kidsbirthday.webp" alt="Birthday Decor">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Setup">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Theme">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398178?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Birthday Flowers">
+            </div>
+            <div class="gallery-item" data-category="birthday">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1g?ixlib=rb-4.0.3&auto=format&fit=c crop&w=600&q=80" alt="Birthday Table">
+            </div>
+            
+            <!-- Corporate Events (6 images) -->
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/lady.webp" alt="Corporate Event">
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/flowers.webp" alt="Conference Setup">
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/mid.webp" alt="Corporate Meeting">
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/flowertable2.webp" alt="Corporate Decor">
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/flowertable3.webp" alt="Corporate Stage">
+            </div>
+            <div class="gallery-item" data-category="corporate">
+                <img src="images/tableflower4.webp" alt="Corporate Setup">
+            </div>
+            
+            <!-- Seasonal (6 images) -->
+            <div class="gallery-item" data-category="seasonal">
+                <img src="images/christmas.webp" alt="Christmas Decor">
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="images/babyshower.webp" alt="spring day Decor">
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="images/marry.webp" alt="marriage propusal Decor">
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="https://images.unsplash.com/photo-1519677100203-a0e668c9243b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Halloween Decor">
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82b302c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Year Decor">
+            </div>
+            <div class="gallery-item" data-category="seasonal">
+                <img src="https://images.unsplash.com/photo-1516527653392-602455dd9cf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Valentine Decor">
             </div>
         </div>
-    </section>
+        
+       
+    </div>
+    
+    <!-- Slideshow container -->
+    <div class="slideshow-container" id="slideshowModal">
+        <div class="slideshow-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            
+            <!-- Slides will be dynamically inserted here -->
+            
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <!-- The dots/circles -->
+            <div class="dots-container" id="dotsContainer">
+                <!-- Dots will be dynamically inserted here -->
+            </div>
+            
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Celebrations Designed to Shine</h3>
-                    <p>Transforming your events with beautiful decor and balloon styling across Johannesburg.</p>
+                    <h3>Bringing Your Vision to Life</h3>
+                    <p>At MISH EVENTS, we specialize in crafting immersive experiences through thoughtful design, creative setups, and personalized touches. From stylish table arrangements and custom signage to lush backdrops and dynamic balloon installations, we bring sophistication and flair to every occasion. Whether it's a wedding, corporate launch, or private celebration, we’re here to elevate your event with decor that speaks volumes.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/balloon_ville?igsh=YnQzZ3YyYTI2cGlv"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-tiktok"></i></a>
                         <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                         <a href="#" class="social-link" target="_blank" title="Follow us on Twitter">
+                    <i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
@@ -101,16 +259,19 @@
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
-                    <p><i class="fas fa-phone"></i> +27 123 456 789</p>
-                    <p><i class="fas fa-envelope"></i> info@celebrations.co.za</p>
+                    <p><i class="fas fa-phone"></i> +27833147008</p>
+                     <p><i class="fas fa-envelope"></i>balloonvillecreations@gmail.com</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2023 Celebrations Designed to Shine. All rights reserved.</p>
+                <p>&copy; 2025 MISH EVENTS</p>
+                <p class="design">Website designed by <a href="mailto:blandinebukasa118@gemail.com">Blandine Bukasa</a></p>
             </div>
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="structured-data.js"></script>
+    <script src="slidegallery.js"></script>
 </body>
 </html>

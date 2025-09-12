@@ -205,3 +205,24 @@ if (filterBtns.length > 0 && galleryItems.length > 0) {
 document.addEventListener('DOMContentLoaded', function() {
     setActiveNavLink();
 });
+
+ // Hero image slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            // Show the selected slide
+            slides[index].classList.add('active');
+        }
+        
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+        
