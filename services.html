@@ -46,7 +46,7 @@
     <link rel="canonical" href="https://mish-events.netlify.app/">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="style.css">
+   
     <link rel="stylesheet" href="responsivedesing.css">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -57,21 +57,21 @@
     
 </head>
 <body>
-    <!-- Header with Navigation -->
+ <!-- Header with Navigation -->
     <header>
         <div class="nav-container">
-           <a href="index.html" class="logo">
-    <img src="images/logo.webp" alt="MiSH EVENTS">
-</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="MiSH EVENTS">
+            </a>
             
             <ul class="nav-menu" id="navMenu">
-    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-    <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-    <li class="nav-item"><a href="hire.html" class="nav-link">Hire Decor</a></li>
-    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-</ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active">Services</a></li>
+                <li class="nav-item"><a href="hire.html" class="nav-link">Hire Decor</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
             
             <div class="nav-controls">
                 <button class="mode-toggle" id="modeToggle">
@@ -83,15 +83,13 @@
             </div>
         </div>
     </header>
+
     <!-- Services Section -->
     <section id="services" class="page-section active">
         <div class="container">
-          
-      <div class="video-container">
-                <video id="myVideo" autoplay muted loop playsinline poster="videos/wedding.mp4">
-                    
-                    <source src="videos/wedding.mp4" type="video/mp4">
-                   
+            <div class="video-container">
+                <video id="myVideo" autoplay muted loop playsinline poster="videos/AQNxBryeNzHpLCWvUWj-XUW7jB3XsOwmTACb8iDvAtSYKF8uTVDTmgp0vOJPOxnr6gp2PtUBwOCw4I2pox87LT3fZDeHOEBZp7IAPJg.mp4">
+                    <source src="videos/AQNxBryeNzHpLCWvUWj-XUW7jB3XsOwmTACb8iDvAtSYKF8uTVDTmgp0vOJPOxnr6gp2PtUBwOCw4I2pox87LT3fZDeHOEBZp7IAPJg.mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay">
                     <h2>Our Services & Packages</h2>
@@ -107,85 +105,149 @@
                     <button class="control-btn" id="muteBtn">
                         <i class="fas fa-volume-mute"></i>
                     </button>
-                    <div class="volume-tooltip" id="volumeTooltip">Click to unmute</div>
                 </div>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-layer-group"></i>
-                    <h3>Full Setup Service</h3>
-                    <p>Complete event styling including backdrops, balloon arrangements, centerpieces, and themed decor. We handle everything from design to cleanup.</p>
+            <div class="services-content">
+                <h2 class="section-title">Our Decor Packages</h2>
+                
+                <p class="section-description">
+                    Choose from our carefully crafted packages to make your event unforgettable. 
+                    Each package includes premium materials and professional installation.
+                </p>
+                
+                <div class="package-highlights">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="highlight-title">Theme Customization</h3>
+                        <p>Tell us your vision and we'll bring it to life with colors, styles, and elements that match your event perfectly.</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="highlight-title">Quick Setup</h3>
+                        <p>Our team handles all setup and teardown so you can focus on enjoying your special day.</p>
+                    </div>
+                    
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="highlight-title">Premium Quality</h3>
+                        <p>We use only the highest quality materials that look beautiful and last throughout your event.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Custom Themes</h3>
-                    <p>Have a specific vision? We create custom decor designs based on your theme, color scheme, or inspiration to make your event unique.</p>
+                
+                <div class="package-comparison">
+                    <table class="package-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="package-name">Basic Package</th>
+                                <th class="package-name popular">Premium Package</th>
+                                <th class="package-name">Custom Package</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="feature">Backdrop
+                                    <span class="feature-details">Elegant fabric backdrop with basic design</span>
+                                </td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Premium materials with lighting</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Fully customized to your theme</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Balloon Arrangements
+                                    <span class="feature-details">Standard balloon clusters</span>
+                                </td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Organic balloon arrangements</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Advanced designs with specialty balloons</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Printed Board
+                                    <span class="feature-details">Welcome sign or basic info board</span>
+                                </td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">High-quality printed signage</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Custom designed printed elements</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Themed Centerpieces
+                                    <span class="feature-details">Table centerpieces matching your theme</span>
+                                </td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">For up to 10 tables</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Custom designs for all tables</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Ceiling Decor
+                                    <span class="feature-details">Hanging installations</span>
+                                </td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Basic hanging elements</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Elaborate ceiling installations</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Lighting Effects
+                                    <span class="feature-details">Ambient lighting enhancements</span>
+                                </td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Basic mood lighting</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Professional lighting design</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Custom Design
+                                    <span class="feature-details">Personalized elements</span>
+                                </td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Fully bespoke design</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Setup & Teardown
+                                    <span class="feature-details">Full service installation</span>
+                                </td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Consultation
+                                    <span class="feature-details">Planning session with our designers</span>
+                                </td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Basic consultation</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Detailed planning</span></td>
+                                <td><i class="fas fa-check"></i><br><span class="feature-details">Unlimited consultations</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature">Price</td>
+                                <td class="price">R1,500+<span class="price-note">For small events</span></td>
+                                <td class="price">R3,000+<span class="price-note">For medium events</span></td>
+                                <td class="price">Quote-based<span class="price-note">Tailored to your needs</span></td>
+                            </tr>
+                            <tr>
+                                <td class="feature"></td>
+                                <td><a href="contact.html" class="btn">Book Now</a></td>
+                                <td><a href="contact.html" class="btn">Book Now</a></td>
+                                <td><a href="contact.html" class="btn">Get Quote</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-snowflake"></i>
-                    <h3>Seasonal Styling</h3>
-                    <p>Festive decor for Christmas, New Year, Easter, and other seasonal celebrations. Perfect for homes, offices, and holiday parties.</p>
+                
+                <div class="additional-info">
+                    <h3 class="info-title">Need Something Different?</h3>
+                    <p>All our packages can be customized to suit your specific needs. Contact us to discuss modifications to any package or to create a completely custom solution for your event.</p>
+                    <p style="margin-top: 15px;">
+                        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                    </p>
                 </div>
-            </div>
-            
-            <h3 class="section-title">Packages</h3>
-            
-            <div class="package-comparison">
-                <table class="package-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Basic Package</th>
-                            <th>Premium Package</th>
-                            <th>Custom Package</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="feature">Backdrop</td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="feature">Balloon Arrangements</td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="feature">Printed Board</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="feature">Themed Centerpieces</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="feature">Custom Design</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td class="feature">Price</td>
-                            <td>R1,500+</td>
-                            <td>R3,000+</td>
-                            <td>Quote-based</td>
-                        </tr>
-                        <tr>
-                            <td class="feature"></td>
-                            <td><a href="#contact" class="btn">Book Now</a></td>
-                            <td><a href="#contact" class="btn">Book Now</a></td>
-                            <td><a href="#contact" class="btn">Get Quote</a></td>
-                        </tr>
-                    </tbody>
-                </table>
             </div>
         </div>
     </section>
@@ -196,13 +258,9 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Bringing Your Vision to Life</h3>
-                    <p>At MISH EVENTS, we specialize in crafting immersive experiences through thoughtful design, creative setups, and personalized touches. From stylish table arrangements and custom signage to lush backdrops and dynamic balloon installations, we bring sophistication and flair to every occasion. Whether it's a wedding, corporate launch, or private celebration, we’re here to elevate your event with decor that speaks volumes.</p>
+                    <p>At MISH EVENTS, we specialize in crafting immersive experiences through thoughtful design, creative setups, and personalized touches. From stylish table arrangements and custom signage to lush backdrops and dynamic balloon installations, we bring sophistication and flair to every occasion. Whether it's a wedding, corporate launch, or private celebration, we're here to elevate your event with decor that speaks volumes.</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/balloon_ville?igsh=YnQzZ3YyYTI2cGlv"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                         <a href="#" class="social-link" target="_blank" title="Follow us on Twitter">
-                    <i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 
@@ -222,18 +280,17 @@
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
                     <p><i class="fas fa-phone"></i> +27833147008</p>
-                     <p><i class="fas fa-envelope"></i>balloonvillecreations@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> balloonvillecreations@gmail.com</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
                 <p>&copy; 2025 MISH EVENTS</p>
-                <p class="design">Website designed by <a href="mailto:blandinebukasa118@gemail.com">Blandine Bukasa</a></p>
+                <p class="design">Website designed by <a href="mailto:blandinebukasa118@gmail.com">BlandineTech</a></p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="structured-data.js"></script>
     <script src="services.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

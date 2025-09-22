@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function() {
+ /*document.addEventListener('DOMContentLoaded', function() {
             // Get all gallery items and filter buttons
             const galleryItems = document.querySelectorAll('.gallery-item');
             const filterButtons = document.querySelectorAll('.filter-btn');
@@ -161,5 +161,149 @@
                         document.body.style.overflow = '';
                     }
                 }
+            });
+        });*/
+         document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filterValue = button.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Slideshow functionality
+            const slideshowModal = document.getElementById('slideshowModal');
+            const slideImage = document.getElementById('slideImage');
+            const slideCaption = document.getElementById('slideCaption');
+            const categoryIndicator = document.getElementById('categoryIndicator');
+            const closeSlideshowBtn = document.getElementById('closeSlideshow');
+            const prevSlideBtn = document.getElementById('prevSlide');
+            const nextSlideBtn = document.getElementById('nextSlide');
+            const viewSlideshowBtn = document.getElementById('viewSlideshow');
+            
+            let currentSlideIndex = 0;
+            let filteredItems = [];
+            
+            // Function to open slideshow
+            function openSlideshow() {
+                // Get current filter
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                
+                // Get all visible items based on filter
+                filteredItems = [];
+                galleryItems.forEach(item => {
+                    if (activeFilter === 'all' || item.getAttribute('data-category') === activeFilter) {
+                        if (item.style.display !== 'none') {
+                            filteredItems.push(item);
+                        }
+                    }
+                });
+                
+                if (filteredItems.length > 0) {
+                    currentSlideIndex = 0;
+                    showSlide(currentSlideIndex);
+                    slideshowModal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+            
+            // Function to show a specific slide
+            function showSlide(index) {
+                if (filteredItems.length === 0) return;
+                
+                const item = filteredItems[index];
+                const img = item.querySelector('img');
+                
+                slideImage.src = img.src;
+                slideImage.alt = img.alt;
+                slideCaption.textContent = img.alt;
+                
+                // Set category indicator
+                const category = item.getAttribute('data-category');
+                const categoryMap = {
+                    'baby': 'Baby Showers',
+                    'birthday': 'Birthdays',
+                    'corporate': 'Corporate Events',
+                    'seasonal': 'Seasonal Events'
+                };
+                categoryIndicator.textContent = categoryMap[category] || 'Event';
+            }
+            
+            // Event listeners
+            viewSlideshowBtn.addEventListener('click', openSlideshow);
+            
+            closeSlideshowBtn.addEventListener('click', () => {
+                slideshowModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+            
+            prevSlideBtn.addEventListener('click', () => {
+                currentSlideIndex = (currentSlideIndex - 1 + filteredItems.length) % filteredItems.length;
+                showSlide(currentSlideIndex);
+            });
+            
+            nextSlideBtn.addEventListener('click', () => {
+                currentSlideIndex = (currentSlideIndex + 1) % filteredItems.length;
+                showSlide(currentSlideIndex);
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (slideshowModal.style.display === 'block') {
+                    if (e.key === 'ArrowLeft') {
+                        currentSlideIndex = (currentSlideIndex - 1 + filteredItems.length) % filteredItems.length;
+                        showSlide(currentSlideIndex);
+                    } else if (e.key === 'ArrowRight') {
+                        currentSlideIndex = (currentSlideIndex + 1) % filteredItems.length;
+                        showSlide(currentSlideIndex);
+                    } else if (e.key === 'Escape') {
+                        slideshowModal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            });
+            
+            // Click on gallery items to open slideshow at that image
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    // Get current filter
+                    const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                    
+                    // Get all visible items based on filter
+                    filteredItems = [];
+                    galleryItems.forEach(item => {
+                        if (activeFilter === 'all' || item.getAttribute('data-category') === activeFilter) {
+                            if (item.style.display !== 'none') {
+                                filteredItems.push(item);
+                            }
+                        }
+                    });
+                    
+                    // Find the index of the clicked item in the filtered array
+                    currentSlideIndex = filteredItems.indexOf(item);
+                    
+                    if (currentSlideIndex !== -1) {
+                        showSlide(currentSlideIndex);
+                        slideshowModal.style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
             });
         });

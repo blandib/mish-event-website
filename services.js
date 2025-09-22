@@ -63,3 +63,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 pauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
             });
         });
+        /**parkages */
+         // Add subtle animations to elements when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Animate highlight cards
+            const cards = document.querySelectorAll('.highlight-card');
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+            
+            // Animate table rows with a slight delay
+            const rows = document.querySelectorAll('.package-table tbody tr');
+            rows.forEach((row, index) => {
+                row.style.opacity = 0;
+                row.style.transform = 'translateX(-20px)';
+                row.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+                observer.observe(row);
+            });
+        });
