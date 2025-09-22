@@ -50,7 +50,7 @@ if (modeToggle) {
     });
 }
 
-// FAQ Toggle - Only on contact page
+/*FAQ Toggle - Only on contact page
 const faqQuestions = document.querySelectorAll('.faq-question');
 
 if (faqQuestions.length > 0) {
@@ -73,7 +73,7 @@ if (quoteForm) {
         alert('Thank you for your inquiry! We will get back to you shortly.');
         quoteForm.reset();
     });
-}
+}*/
 
 // Gallery Filtering - Only on gallery page
 const filterBtns = document.querySelectorAll('.filter-btn');

@@ -178,59 +178,58 @@
             resize: vertical;
         }
         
-        /* FAQ Section */
-        .faq {
-            margin-top: 4rem;
-        }
-        
-        .faq-item {
-            margin-bottom: 1rem;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 1.5rem;
-            background: #f9f9f9;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #292F36;
-        }
-        
-        .faq-question i {
-            transition: transform 0.3s ease;
-        }
-        
-        .faq-question.active i {
-            transform: rotate(180deg);
-        }
-        
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        
-        .faq-answer.open {
-            padding: 1.5rem;
-            max-height: 500px;
-        }
-        
-        .faq-answer p {
-            color: #666;
-            line-height: 1.6;
-        }
-        .faq-answer {
-    display: none;
+  /* FAQ Section */
+.faq {
+  margin-top: 4rem;
 }
+
+.faq-item {
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #292F36; /* kept your color */
+}
+
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+/* Rotate icon when active */
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+/* Answer box closed by default */
+.faq-answer {
+  max-height: 0;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Open state */
 .faq-item.active .faq-answer {
-    display: block;
+  max-height: 500px; /* adjust height if needed */
+  padding: 1.5rem;
 }
+
+.faq-answer p {
+  color: #c19d30; /* kept your color */
+  line-height: 1.6;
+}
+
+
         /* Hero Image */
         .page-section img {
             width: 100%;
