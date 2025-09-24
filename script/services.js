@@ -1,68 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('myVideo');
-            const playBtn = document.getElementById('playBtn');
-            const pauseBtn = document.getElementById('pauseBtn');
-            const muteBtn = document.getElementById('muteBtn');
-            const volumeTooltip = document.getElementById('volumeTooltip');
-            
-            // Set initial state for mute button (video starts muted)
+    const video = document.getElementById('myVideo');
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const volumeTooltip = document.getElementById('volumeTooltip');
+    
+    // Check if elements exist
+    if (!video || !playBtn || !pauseBtn || !muteBtn) {
+        console.error('One or more video control elements not found');
+        return;
+    }
+    
+    // Set initial state
+    function updateButtonStates() {
+        // Update play/pause buttons based on video state
+        if (video.paused) {
+            playBtn.style.display = 'block';
+            pauseBtn.style.display = 'none';
+        } else {
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'block';
+        }
+        
+        // Update mute button
+        if (video.muted) {
             muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-            volumeTooltip.textContent = 'Click to unmute';
-            
-            // Play button functionality
-            playBtn.addEventListener('click', function() {
-                video.play();
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                pauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            });
-            
-            // Pause button functionality
-            pauseBtn.addEventListener('click', function() {
-                video.pause();
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                pauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            });
-            
-            // Mute button functionality - FIXED
-            muteBtn.addEventListener('click', function() {
-                if (video.muted) {
-                    video.muted = false;
-                    muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-                    volumeTooltip.textContent = 'Click to mute';
-                } else {
-                    video.muted = true;
-                    muteBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
-                    volumeTooltip.textContent = 'Click to unmute';
-                }
-                
-                // Show tooltip
-                volumeTooltip.classList.add('show');
-                setTimeout(() => {
-                    volumeTooltip.classList.remove('show');
-                }, 2000);
-            });
-            
-            // Show tooltip on hover
-            muteBtn.addEventListener('mouseenter', function() {
-                volumeTooltip.classList.add('show');
-            });
-            
-            muteBtn.addEventListener('mouseleave', function() {
-                volumeTooltip.classList.remove('show');
-            });
-            
-            // Automatically show pause icon when video is playing
-            video.addEventListener('play', function() {
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                pauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            });
-            
-            // Automatically show play icon when video is paused
-            video.addEventListener('pause', function() {
-                playBtn.innerHTML = '<i class="fas fa-play"></i>';
-                pauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
-            });
+            if (volumeTooltip) volumeTooltip.textContent = 'Click to unmute';
+        } else {
+            muteBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            if (volumeTooltip) volumeTooltip.textContent = 'Click to mute';
+        }
+    }
+    
+    // Initialize button states
+    updateButtonStates();
+    
+    // Play button functionality
+    playBtn.addEventListener('click', function() {
+        video.play().catch(error => {
+            console.error('Error playing video:', error);
         });
+    });
+    
+    // Pause button functionality
+    pauseBtn.addEventListener('click', function() {
+        video.pause();
+    });
+    
+    // Mute button functionality
+    muteBtn.addEventListener('click', function() {
+        video.muted = !video.muted;
+        updateButtonStates();
+        
+        // Show tooltip if it exists
+        if (volumeTooltip) {
+            volumeTooltip.classList.add('show');
+            setTimeout(() => {
+                volumeTooltip.classList.remove('show');
+            }, 2000);
+        }
+    });
+    
+    // Tooltip hover events
+    if (volumeTooltip) {
+        muteBtn.addEventListener('mouseenter', function() {
+            volumeTooltip.classList.add('show');
+        });
+        
+        muteBtn.addEventListener('mouseleave', function() {
+            volumeTooltip.classList.remove('show');
+        });
+    }
+    
+    // Video event listeners
+    video.addEventListener('play', updateButtonStates);
+    video.addEventListener('pause', updateButtonStates);
+    video.addEventListener('volumechange', updateButtonStates);
+    
+    // Handle video loading errors
+    video.addEventListener('error', function() {
+        console.error('Video loading error:', video.error);
+    });
+    
+    // Handle cases where autoplay might be blocked
+    video.play().catch(error => {
+        console.log('Autoplay was blocked:', error);
+        // Show play button if autoplay is blocked
+        playBtn.style.display = 'block';
+        pauseBtn.style.display = 'none';
+    });
+});
         /**parkages */
          // Add subtle animations to elements when they come into view
         document.addEventListener('DOMContentLoaded', function() {
